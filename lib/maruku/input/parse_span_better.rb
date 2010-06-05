@@ -575,8 +575,10 @@ module MaRuKu; module In; module Markdown; module SpanLevelParser
 						rest = read_simple(src, escaped=[], break_on_chars=[?)], 
 							break_on_strings=[])
 						# chop the closing char
-						rest.chop!
-						title << quote_char << rest
+                                                if rest
+                                                  rest.chop!
+                                                  title << quote_char << rest
+                                                end
 					end
 				end
 			end
