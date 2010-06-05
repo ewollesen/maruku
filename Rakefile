@@ -1,5 +1,5 @@
 require 'rubygems'
-Gem::manage_gems
+require 'rubygems/gem_runner'
 require 'rake/gempackagetask'
 
 require 'maruku_gem'
